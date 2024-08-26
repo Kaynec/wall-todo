@@ -1,0 +1,165 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  --color: rgba(255, 255, 255, 0.87);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 100svh;
+  background-image: url("./assets/wall-background.webp");
+  background-color: rgba(0, 0, 0, 0.545);
+  background-blend-mode: color;
+  color: var(--color);
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.content__wrapper {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+.btn {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  color: var(--color);
+  background-color: #1a1a1a;
+  transition: border-color 0.25s;
+}
+.btn:hover {
+  border-color: #646cff;
+}
+.btn:focus,
+.btn:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.add__todo {
+  padding-top: 3rem;
+}
+.add__todo__content {
+  border-radius: 0.5rem;
+  padding: 2rem;
+}
+
+.todo__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, min(max(50vw, 360px), 18rem));
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.todo {
+  aspect-ratio: 11/16;
+  background-image: url("./assets/sticky-note-normal.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.todo__active {
+  background-image: url("./assets/sticky-note-active-com.svg");
+}
+.todo .todo__content {
+  color: black;
+  padding: 2rem;
+  padding-top: 50%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 2rem;
+}
+.todo .todo__btns {
+  display: flex;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.todo .todo__btns .btn {
+  flex: 1;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.322);
+  display: grid;
+  place-items: center;
+  backdrop-filter: blur(7.7px);
+}
+
+.modal__content {
+  background: rgba(44, 41, 41, 0.851);
+  border-radius: 16px;
+  width: min(90vw, 480px);
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.add__todo {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 2rem;
+}
+
+.add__todo button {
+  width: 100%;
+}
+
+.add__todo div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+  width: 100%;
+}
+
+.add__todo div input {
+  width: 75%;
+  appearance: none;
+  padding: 1rem;
+  border: none;
+  outline: none;
+  border-radius: 0.4rem;
+}
+
+.add__todo div label {
+  font-size: 1rem;
+}
+
+.add__todo input:valid :not(:empty) {
+  border: green 2px solid;
+  outline: green 2px;
+}
+.add__todo input:invalid {
+  border: red 2px solid;
+  outline: red 2px;
+}
+/* Utility Classes */
+.equal__btns {
+  display: flex;
+  gap: 1rem;
+  padding-block: 1rem;
+}
+
+.equal__btns button {
+  flex: 1;
+}
